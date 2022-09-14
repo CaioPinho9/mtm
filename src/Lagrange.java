@@ -44,13 +44,12 @@ public class Lagrange {
                     yk *= (x0 - x[j]) / (x[k] - x[j]);
                     ak *= 1 / (x[k] - x[j]);
                     bk -= x[j];
-                    ck *= -x[j];
+                    ck *= -x[j] / (x[k] - x[j]);
                 }
             }
             for (int j = 0; j <= n; j++) {
                 if (k != j) {
                     bk *= 1 / (x[k] - x[j]);
-                    ck *= 1 / (x[k] - x[j]);
                 }
             }
             y0 += yk * y[k];
