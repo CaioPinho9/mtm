@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        int n = 5;
-        int m = 1;
+        int n = 9;
+        int m = 3;
         float a;
 
-        a = Pro(m, n, 0);
+        a = Pro(m, n, 0) * 0.25f;
         System.out.println(a);
     }
 
@@ -12,9 +12,9 @@ public class Main {
         float a = 0;
         for (int i = m; i<=n; i++) {
             if (index == 0) {
-                a += threeMinusI(i);
+                a += fourJ(i);
             } else {
-
+                a += twoJ(i);
             }
         }
         return a;
@@ -24,7 +24,7 @@ public class Main {
         float a = 1;
         for (int i = m; i<=n; i++) {
             if (index == 0) {
-                a *= threeMinusI2(i);
+                a *= k3(i);
             } else {
                 a *= h2(i);
             }
@@ -53,7 +53,11 @@ public class Main {
     }
 
     public static float fourJ(int j) {
-        return (float) ((4*j - 3) * Math.pow(j, 2)) / (float) 2 * j;
+        return (float) ((4*j - 3) * Math.pow(j, 2));
+    }
+
+    public static float twoJ(int j) {
+        return (float) 2 * j;
     }
 
     public static float k3(int k) {
