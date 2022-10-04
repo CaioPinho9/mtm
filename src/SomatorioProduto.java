@@ -1,4 +1,4 @@
-public class Main {
+public class SomatorioProduto {
     public static void main(String[] args) {
         //Último index
         int n = 9;
@@ -25,11 +25,11 @@ public class Main {
             if (index == 0) {
                 //Somatório externo
                 //Troque o metódo pela equação que deseja utilizar
-                a += fourJ(i);
+                a += k3(i);
             } else {
                 //Somatório interno
                 //Troque o metódo pela equação que deseja utilizar
-                a += twoJ(i);
+                a += h2(i);
             }
         }
         //Retorna o resultado
@@ -92,7 +92,7 @@ public class Main {
 
     //k^3 - (2/3) * Produto interno(4, 2, 1)
     public static float k3(int k) {
-        return (float) (Math.pow(k, 3) - (2/3) * Pro(4,2,1));
+        return (float) (Math.pow(k, 3) - (2/3) * Pro(2,4,1));
     }
 
     //h^2 - 1
